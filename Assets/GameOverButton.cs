@@ -20,6 +20,11 @@ public class GameOverButton : MonoBehaviour
     }
     public void GameOverSceneSwitch()
     {
+        if(GameObject.FindObjectOfType<DialogueGlobals>() != null)
+            GameObject.FindObjectOfType<DialogueGlobals>().ResetRemainingWC();
+        if (GameObject.FindObjectOfType<GameController>() != null)
+            GameObject.FindObjectOfType<GameController>().ResetVars();
+
         SceneManager.LoadScene("Day1");
     }
 }

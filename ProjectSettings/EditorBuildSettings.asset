@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Misc/StartScreen.unity
+    guid: dc8aa8e0bc1b8a745908b1f4aa145ac1
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Misc/Introduction Scene.unity
+    guid: c00de96453e4ef8408b19efef9d993d9
+  - enabled: 0
+    path: Assets/Scenes/BuildScenes/DialogueBoxTesting.unity
+    guid: 5a51cdc8db8507b4cbecc900f381a59c
+  - enabled: 0
+    path: Assets/Scenes/BuildScenes/Boss_testGround.unity
+    guid: b3db13e861f7a6e44924221cab15da21
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Boss/Kid.unity
+    guid: 31235c3dea1247143beed711f99d8576
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Boss/Shark.unity
+    guid: 542f8952b0d6cac45a04ca88d34ed8d5
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Boss/Hound.unity
+    guid: ab06e562f10e50a42aca013690917fdd
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Dog.unity
+    guid: 060e47fe8e16f8b4e8a4674105271321
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Dialogue/Day1.unity
+    guid: 18443875481d0c54c8e6e41cdce11638
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Dialogue/Day2Loss.unity
+    guid: 5f3af9a92031ae7418a19ed220a46942
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Dialogue/Day2Win.unity
+    guid: 3a784622866f08144abbb65532ac6b98
+  - enabled: 0
+    path: 
+    guid: 1bbc7950d6ea0c040acd8741bef50a89
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/ZombieBuild.unity
+    guid: 2408c640528c9e546952f50921bb42bb
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Misc/GameOver.unity
+    guid: 37f6bd736fecad840a31c6dee80be6bb
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Misc/Win.unity
+    guid: 40a1deac534b42f4589161d1fee7882f
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Boss/Zombie.unity
+    guid: 9269893ab5791c54daffde382e0b7704
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Misc/Credits.unity
+    guid: 286e3f897efc40f4fa0a83c27b425126
+  m_configObjects: {}

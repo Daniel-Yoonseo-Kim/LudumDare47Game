@@ -125,7 +125,7 @@ EMPTY
 1;-1;-1;-1;9;Is there anything I can do to help?
 3;-1;-1;-1;14;Is there anything I can do to help?
 -1;-1;0;-1;24;What do you know about The Zombie?
--1;-1;1;-1;25;What do you know about The Goat?
+-1;-1;1;-1;25;What do you know about The Kid?
 -1;-1;2;-1;26;What do you know about The Ghost?
 -1;-1;2;-1;27;What do you know about The Shark?
 -1;-1;-1;-1;23;What is the compensation for completing a bounty?
@@ -333,7 +333,7 @@ Well, you’re going to be in for a show. I hear that there’s a big battle com
 :-
 EMPTY
 :-
-33
+34
 
 33;Amelia;""
 :-
@@ -692,7 +692,7 @@ EMPTY
 Hmm... There are two monsters that I saw in action that tried to attack us but, of course, we quickly defeated them. Which one do you want to know more about?
 :-
 -1;-1;3;-1;75;What do you know about the SandShark?
--1;-1;1;-1;76;What do you know about the Goat?
+-1;-1;1;-1;76;What do you know about the Kid?
 :-
 75
 

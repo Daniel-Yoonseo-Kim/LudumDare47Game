@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using System.Linq;
 
 
@@ -53,7 +54,7 @@ public class DialogueManager : MonoBehaviour
     public bool skill3;
 
     public bool start;
-
+    public bool win = false;
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +71,7 @@ public class DialogueManager : MonoBehaviour
         
         Parse();
 
-        Debug.Log("HERE");
+        
         LoadText("PH");
         globals.ChangeDayCounter();
     }
@@ -88,24 +89,48 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       /* 
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            gameController.skill1 = Header.Skills.SHIELD;
+            gameController.playerSkills[Header.Skills.SHIELD] = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            gameController.skill2 = Header.Skills.HEAL;
+            gameController.playerSkills[Header.Skills.HEAL] = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            gameController.skill1 = Header.Skills.BLOCK;
+            gameController.playerSkills[Header.Skills.BLOCK] = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            gameController.skill2 = Header.Skills.JUMP;
+            gameController.playerSkills[Header.Skills.JUMP] = true;
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Debug.Log((bool)gameController.playerSkills[Header.Skills.SHIELD]);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            Debug.Log((bool)gameController.playerSkills[Header.Skills.HEAL]);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            Debug.Log((bool)gameController.playerSkills[Header.Skills.BLOCK]);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            Debug.Log((bool)gameController.playerSkills[Header.Skills.JUMP]);
+        }*/
+
+        if (cur == 7 && gameController.skillsUsed <= 0 && win == false)
+        {
+            win = true;
+            SceneManager.LoadSceneAsync("Win");
+        }
+
+
         if (cur == -1)
         {
             //Remove Dialogue Window and switch to hunting board
@@ -408,6 +433,7 @@ public class DialogueManager : MonoBehaviour
                         _dialogueChoice.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = option.optionText;
                         _dialogueChoice.GetComponent<Button>().onClick.AddListener(() => { DisplayDialogueChoice(option.optionText); next = option.nextId;
                             globals.RemoveHighestWC();
+                            gameController.skillsUsed--;
                             Debug.Log("Skill filter"); });
                         continue;
                     }

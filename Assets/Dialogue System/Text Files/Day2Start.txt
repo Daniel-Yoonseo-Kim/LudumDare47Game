@@ -193,7 +193,7 @@ However, once the wall is broken, our defensive advantage will be eliminated and
 :-
 EMPTY
 :-
-16
+17
 
 16;Sergeant Gerard;""
 :-
@@ -309,7 +309,7 @@ EMPTY
 :-
 EMPTY
 :-
-30
+31
 
 30;Amelia;""
 :-
@@ -333,7 +333,7 @@ Well, you’re going to be in for a show. I hear that there’s a big battle com
 :-
 EMPTY
 :-
-33
+34
 
 33;Amelia;""
 :-

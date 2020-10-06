@@ -33,6 +33,14 @@ public class chargeBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if ((animator.gameObject.transform.position.x > player.position.x && enemy.isFlipped)
+            || (animator.gameObject.transform.position.x < player.position.x && !enemy.isFlipped)) {
+            animator.SetTrigger("idle");
+            // enemy.LookAtPlayer();
+            return;
+        }
+
+
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
         rb.MovePosition(newPos);
 

@@ -42,6 +42,15 @@ public class DialogueGlobals : MonoBehaviour
 
     }
 
+
+    public void ResetRemainingWC()
+    {
+        remainingWC.Clear();
+        Header.Skills[] wc = gameController.getNeededSkills();
+        remainingWC.Add((int)wc[0]);
+        remainingWC.Add((int)wc[1]);
+    }
+
     public void Update()
     {
         /*

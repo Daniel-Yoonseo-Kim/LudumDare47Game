@@ -15,6 +15,16 @@ public class ButtonManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadSceneAsync("Credits");
+    }    
+
+    public void BackToStart()
+    {
+        SceneManager.LoadSceneAsync("StartScreen");
+    }
+
     public void Day1Scene()
     {
         SceneManager.LoadSceneAsync("Day1");

@@ -215,6 +215,7 @@ public class GameController : MonoBehaviour
 
     public void PlayerDie()
     {
+        Debug.Log("block, heal, shield, jump");
         Debug.Log(playerSkills[Header.Skills.BLOCK]);
         Debug.Log(playerSkills[Header.Skills.HEAL]);
         Debug.Log(playerSkills[Header.Skills.SHIELD]);
@@ -275,6 +276,7 @@ public class GameController : MonoBehaviour
                     dialogueFlags[Header.Flags.Boss1Win] = true;
                     break;
                 case Header.Bosses.DOG:
+                    Debug.Log("oooooooo");
                     liveBosses[boss] = false;
                     playerSkills[Header.Skills.BLOCK] = true;
                     dialogueFlags[Header.Flags.Boss2Win] = true;
@@ -317,7 +319,7 @@ public class GameController : MonoBehaviour
         day = 0;
         actions = 0;
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
-
+        GameObject.FindObjectOfType<DialogueGlobals>().ResetRemainingWC();
         skill1 = Header.Skills.NULL;
         skill2 = Header.Skills.NULL;
 
@@ -326,9 +328,47 @@ public class GameController : MonoBehaviour
                 skill2Used = false;*/
         skillsUsed = 2;
         //some flags will be switched
+        dialogueFlags[Header.Flags.Boss0Die] = false;
+        dialogueFlags[Header.Flags.Boss1Die] = false;
+        dialogueFlags[Header.Flags.Boss2Die] = false;
+        dialogueFlags[Header.Flags.Boss3Die] = false;
+        dialogueFlags[Header.Flags.Boss0Win] = false;
+        dialogueFlags[Header.Flags.Boss1Win] = false;
+        dialogueFlags[Header.Flags.Boss2Win] = false;
+        dialogueFlags[Header.Flags.Boss3Win] = false;
 
 
 
+    }
+
+    public void ResetVars()
+    {
+        liveBosses[Header.Bosses.ZOMBIE] = true;
+        liveBosses[Header.Bosses.GOAT] = true;
+        liveBosses[Header.Bosses.SHARK] = true;
+        liveBosses[Header.Bosses.DOG] = true;
+
+        playerSkills[Header.Skills.SHIELD] = false;
+        playerSkills[Header.Skills.BLOCK] = false;
+        playerSkills[Header.Skills.HEAL] = false;
+        playerSkills[Header.Skills.JUMP] = false;
+
+        day = 0;
+        actions = 0;
+        skill1 = Header.Skills.NULL;
+        skill2 = Header.Skills.NULL;
+
+        dayWin = false;
+
+        skillsUsed = 2;
+        dialogueFlags[Header.Flags.Boss0Die] = false;
+        dialogueFlags[Header.Flags.Boss1Die] = false;
+        dialogueFlags[Header.Flags.Boss2Die] = false;
+        dialogueFlags[Header.Flags.Boss3Die] = false;
+        dialogueFlags[Header.Flags.Boss0Win] = false;
+        dialogueFlags[Header.Flags.Boss1Win] = false;
+        dialogueFlags[Header.Flags.Boss2Win] = false;
+        dialogueFlags[Header.Flags.Boss3Win] = false;
     }
 
     public void Win()
@@ -338,10 +378,10 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
-        if(skillsUsed == 0)
+        /*if(skillsUsed == 0)
         {
             Win();
-        }
+        }*/
         if(day >= 4)
         {
             Restart();
